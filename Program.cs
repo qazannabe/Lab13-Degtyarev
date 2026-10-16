@@ -23,3 +23,24 @@ void PrintStudentCard(string name, string groupName, int age)
 }
 PrintStudentCard("Егор", "РУПО265", 18);
 PrintStudentCard("Валерия", "РУПО253", 17);
+
+double CalculateScholLarship(double baseAmount, double bonusPercents)
+{
+    return baseAmount + baseAmount * bonusPercents / 100;
+}
+double result = CalculateScholLarship(2000, 15);
+Console.WriteLine(result);
+
+double calculateAverageGrade(int[] grades)
+{
+    int sum = 0;
+    foreach (int grade in grades)
+    {
+
+        sum += grade;
+    }
+    return (double)sum / grades.Length;
+}
+int[] grades = { 4, 5, 3, 5, 4 };
+double average = calculateAverageGrade(grades);
+Console.WriteLine(average);
